@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture 01 Inception</title>
+    <link rel="stylesheet" href="./ep1.css">
+</head>
+<body>
+    <div id="root">
+        <h1>This heading  is created using plain html </h1>
+    </div>
+    <div id="root2">
+    </div>
+    <div id="root3">
+
+    </div>
+    <script>
+        const root = document.getElementById('root');
+        const heading2 = document.createElement('h2');
+        heading2.innerText = 'This heading is created with javascript';
+        root.appendChild(heading2);
+    </script>
+
+   <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+   <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+   <script src="./ep1App.js"></script>
+</body>
+</html>
