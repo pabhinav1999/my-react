@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 1 Inception </title>
+</head>
+<body>
+    <h1>Creating element with just html</h1>
+    <div id="jsEle"></div>
+     <div id="reactEle"></div>
+     <div id="reactNestedEle">
+     </div>
+    <script>
+        const jsElement = document.createElement('h2');
+        jsElement.innerText = 'Creating element with js';
+        const parent = document.getElementById('jsEle');
+        parent.appendChild(jsElement);
+    </script>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="./ep1a.js"></script>
+</body>
+</html>
