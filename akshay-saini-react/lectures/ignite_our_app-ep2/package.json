@@ -1,0 +1,30 @@
+{
+  "name": "ignite_our_app-ep2",
+  "version": "1.0.0",
+  "description": "Setting up the app to make ready for production",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pabhinav1999/my-react.git"
+  },
+  "keywords": [
+    "react",
+    "developer"
+  ],
+  "author": "Abhinav Kumar Pulijala",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pabhinav1999/my-react/issues"
+  },
+  "homepage": "https://github.com/pabhinav1999/my-react#readme",
+  "devDependencies": {
+    "parcel": "^2.12.0",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
