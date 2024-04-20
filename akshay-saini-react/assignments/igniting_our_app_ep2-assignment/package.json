@@ -1,0 +1,32 @@
+{
+  "name": "igniting_our_app_ep2-assignment",
+  "version": "1.0.0",
+  "description": "This is an assignment related to lecture 2 of namaste react",
+  "scripts": {
+    "test": "jest",
+    "start": "parcel ep2a.html",
+    "build": "parcel build ep2a.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "                                                                                                                                                                                                                                                          "
+  },
+  "keywords": [
+    "assignemnt"
+  ],
+  "author": "Abhinav Kumar Pulijala",
+  "license": "ISC",
+  "dependencies": {
+    "browserslist": "^4.23.0",
+    "parcel": "^2.12.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "process": "^0.11.10"
+  },
+    "browserslist": [
+      "last 2 versions",
+      "> 1%"
+    ]
+}
