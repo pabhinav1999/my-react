@@ -27,3 +27,36 @@ const headingJSXMultLines = (<div id="root1">
 setTimeout(()=>{
     rootjsx.render(headingJSXMultLines)
 },3000)
+
+//creating components
+const Component1 = () => {
+    return (<><h1>This is a component 1 </h1><Component2 /></>)
+}
+
+const Component2 = () =>  <h2>This is a component 2</h2>
+
+const comprend = ReactDOM.createRoot(document.getElementById('componentrender'));
+comprend.render(
+    (
+        <div id="example">
+            <Component1 />
+        </div>
+    )
+)
+
+// rendering js inside jsx
+const number = 10000
+const desc = <p>This is a package which can be incorporated in the below compnent</p>
+const MixJSX = function () {
+    return (
+        <div id='container'>
+         {number}
+         {desc}
+         {Component1 ()}
+        </div>
+    )
+}
+
+ comprend.render( <MixJSX></MixJSX>);
+ comprend.render( <MixJSX />);
+
