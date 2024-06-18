@@ -1,0 +1,23 @@
+.header {
+    display: flex;
+    background-color: aqua;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.header input {
+    height: 50px;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+.header .userImg {
+    height: 80px;
+    width: 100px;
+}
+
+.header button {
+    height: 30px;
+    background-color: orange;
+    border-radius: 5px;
+}

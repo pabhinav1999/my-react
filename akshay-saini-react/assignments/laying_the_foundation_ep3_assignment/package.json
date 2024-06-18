@@ -1,0 +1,20 @@
+{
+  "name": "laying_the_foundation_ep3_assignment",
+  "version": "1.0.0",
+  "description": "This is ep3 assignment of akshay saini react",
+  "main": "",
+  "scripts": {
+    "test": "jest",
+    "start":"parcel ep3a.html",
+    "build":"parcel build ep3a.html"
+  },
+  "keywords": [
+    "Ep3"
+  ],
+  "author": "Abhinav Kumar Pulijala",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  }
+}
