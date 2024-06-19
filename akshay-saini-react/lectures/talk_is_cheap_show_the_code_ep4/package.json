@@ -1,0 +1,23 @@
+{
+  "name": "talk_is_cheap_show_the_code_ep4",
+  "version": "1.0.0",
+  "description": "This react application contains restaurant food ordering app",
+  "scripts": {
+    "test": "jest",
+    "start": "parcel food_order.html",
+    "build": "parcel build food_order.html"
+  },
+  "keywords": [
+    "restaurant"
+  ],
+  "author": "Abhinav Kumar Pulijala",
+  "license": "ISC",
+  "dependencies": {
+    "parcel": "^2.12.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "process": "^0.11.10"
+  }
+}
