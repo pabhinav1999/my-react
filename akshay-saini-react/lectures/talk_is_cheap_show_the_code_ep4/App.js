@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { resList,res_img_base_url } from "./constants";
 
 const App = () => {
     return (
@@ -39,16 +40,7 @@ const Content = () => {
                 <button>Search</button>
             </div>
             <div className="res-container">
-               <RestaurantCard resName="Raghavendra" cuisine="Tiffins,veg"></RestaurantCard>
-               <RestaurantCard resName="Spicy Leaf" cuisine="Biryani,n-veg"></RestaurantCard>
-               {/* <RestaurantCard></RestaurantCard>
-               <RestaurantCard></RestaurantCard>
-               <RestaurantCard></RestaurantCard>
-               <RestaurantCard></RestaurantCard>
-               <RestaurantCard></RestaurantCard>
-               <RestaurantCard></RestaurantCard>
-               <RestaurantCard></RestaurantCard>
-               <RestaurantCard></RestaurantCard> */}
+                { resList.map((restaurant) => { return <RestaurantCard key={restaurant.id} restaurant={restaurant}></RestaurantCard> }) }
             </div>
         </div>
     )
@@ -57,21 +49,22 @@ const Content = () => {
 const imgStyle = {
     height: '100px',
     width: '180px',
-    'margin-bottom':'20px'
+    marginBottom:'20px'
 }
 
 
 const RestaurantCard = (props) =>{
-    console.log(props);
-    const { resName , cuisine } = props; //destructuring
+    const { restaurant } = props;
     return (
         <div className="resCard">
-            <img style={imgStyle} src="https://i.ytimg.com/vi/B06WkYGHJp8/hqdefault.jpg" alt="restaurant.png"></img>
-            <span> { resName} </span>
-            <span> { cuisine }</span>
-            <span> $6 for two</span>
-            <span> Rating : ⭐⭐⭐⭐</span>
-            <span> Hyderabad</span>
+            <img style={imgStyle} src={`${res_img_base_url}${restaurant.cloudinaryImageId}`} alt="restaurant.png"></img>
+            <span> { restaurant.name } </span>
+            <span> { restaurant.cuisines.join(',') }</span>
+            <span> { restaurant.costForTwo }</span>
+            <span> { restaurant.avgRating }</span>
+            <span> { restaurant.locality }</span>
+            <span> { restaurant.areaName }</span>
+            <span> { restaurant.sla.slaString }</span>
         </div>
     )
 }
