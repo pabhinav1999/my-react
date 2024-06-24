@@ -1,6 +1,8 @@
-export const res_img_base_url = 'https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/'
+export const RES_CDN_URL = 'https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/'
 
-export const resList = [
+export const LOGO_URL = "https://www.netsolutions.com/insights/wp-content/uploads/2021/11/essential-feature-of-building-an-on-demand-food-ordering-app.jpg"
+
+const resList = [
     {
         "id": "140111",
         "name": "Imperial Multi-Cusine Restaurant",
@@ -637,3 +639,5 @@ export const resList = [
     },
     
 ]
+
+export default resList;
