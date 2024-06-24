@@ -1,4 +1,5 @@
 import { LOGO_URL } from "../utils/constants";
+console.log(LOGO_URL);
 
 const Header = () => {
     return (
