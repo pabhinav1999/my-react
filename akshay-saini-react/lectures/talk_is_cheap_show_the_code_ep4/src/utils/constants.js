@@ -4,7 +4,7 @@ export const LOGO_URL = "https://www.netsolutions.com/insights/wp-content/upload
 
 const resList = [
     {
-        "id": "140111",
+        "id": "1401",
         "name": "Imperial Multi-Cusine Restaurant",
         "cloudinaryImageId": "yeednzto1jusnnhswke0",
         "locality": "Tolichowki",
