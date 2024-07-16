@@ -5,6 +5,8 @@ import ShimmerUI from "./Shimmer";
 
 const Body = () => {
     const [listOfRes, setListOfRes] = useState([]);
+    const [filteredRes, setFilteredRes] = useState([]);
+    const [searchText, setSearchText ] = useState('');
 
     useEffect(()=>{
         fetchData();
@@ -20,6 +22,7 @@ const Body = () => {
         json?.data.cards[4].card.card.gridElements.infoWithStyle.restaurants.forEach((restaurant) => {
         apiListOfRes.push(restaurant.info)});
         setListOfRes(apiListOfRes);
+        setFilteredRes(apiListOfRes);
     }
 
     if(listOfRes.length === 0){
@@ -30,13 +33,25 @@ const Body = () => {
     return (
         <div className="appBody">
             <div className="search">
+                <div className="search-bar">
+                    <input type="text" placeholder="Search for restaurants"
+                    onChange={(e)=>{
+                        setSearchText(e.target.value);
+                    }}
+                    value={searchText}></input>
+                    <button className="search-btn" 
+                    onClick= {() => {
+                        let searchRes = listOfRes.filter((restaurant) => restaurant.name.toLowerCase().includes(searchText.toLowerCase()));
+                        setFilteredRes(searchRes);
+                    }} >Search</button>
+                </div>
                 <button className="filter-btn" onClick={() => {
-                    let topRatedRestaurants = resList.filter((restaurant) => restaurant.avgRating >  4.4);
-                    setListOfRes(topRatedRestaurants);
+                    let topRatedRestaurants = listOfRes.filter((restaurant) => restaurant.avgRating >  4.4);
+                    setFilteredRes(topRatedRestaurants);
                 }}> Top rated restaurants</button>
             </div>
             <div className="res-container">
-                { listOfRes. map((restaurant) => { return <RestaurantCard key={restaurant.id} restaurant={restaurant}></RestaurantCard> }) }
+                { filteredRes. map((restaurant) => { return <RestaurantCard key={restaurant.id} restaurant={restaurant}></RestaurantCard> }) }
             </div>
         </div>
     )

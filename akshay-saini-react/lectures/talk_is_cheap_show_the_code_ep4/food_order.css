@@ -42,7 +42,14 @@
 .header .navItems ul li{
     padding: 10px;
     font-size: 20px;
+
  }
+
+   .header .navItems ul li .loginButton {
+      padding: 20px;
+      background-color: #f0f0f0;
+      cursor: pointer;
+   }
 
  .appBody {
     margin-top: 10px;
@@ -58,6 +65,19 @@
     margin-top: 10px;
     display: flex;
     flex-wrap: wrap;
+ }
+
+ .appBody .search {
+      display: flex;
+      margin: 10px;
+ }
+
+ .appBody .search-bar {
+   margin: 10px;
+ }
+
+ .appBody .search-btn {
+   margin-left: 5px ;
  }
 
  .resCard {
