@@ -44,6 +44,13 @@
     font-size: 20px;
  }
 
+ .header .navItems ul li .login-button {
+   padding: 20px 20px;
+   background-color: #f0f0f0;
+   cursor: pointer;
+
+ }
+
  .appBody {
     margin-top: 10px;
     border: 1px solid black;
@@ -101,3 +108,4 @@
    margin: 20px;
    background-color: #f0f0f0;
  }
+
