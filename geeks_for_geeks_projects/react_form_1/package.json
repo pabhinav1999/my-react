@@ -1,0 +1,23 @@
+{
+  "name": "react_form_1",
+  "version": "1.0.0",
+  "description": "This is a react Project with basic form inputs",
+  "scripts": {
+    "test": "jest",
+    "start":"parcel userform.html",
+    "build":"parcel build userform.html"
+  },
+  "keywords": [
+    "InputForm"
+  ],
+  "author": "Abhinav Kumar Pulijala",
+  "license": "ISC",
+  "dependencies": {
+    "parcel": "^2.12.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "process": "^0.11.10"
+  }
+}
