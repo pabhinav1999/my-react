@@ -74,12 +74,16 @@ textarea {
 }
 
 .btn-container {
-    margin: auto;
+    /* margin: auto; */
+    padding: 20px;
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
 }
 
 .btn-container button {
-    width: 100px;
-    height: 30px;
+    width: 150px;
+    height: 40px;
     background-color: #22A779;
     border: none;
     color: #f5f5f5;
