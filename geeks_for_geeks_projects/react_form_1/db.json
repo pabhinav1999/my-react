@@ -1,0 +1,18 @@
+{
+  "formSubmission": {
+    "firstName": "Abhinav Kumar Pulijala",
+    "lastName": "Bhai",
+    "emailAddress": "pabhinav1999@gmail.com",
+    "contact": "8555968765",
+    "gender": "female",
+    "subject": {
+      "english": true,
+      "maths": false,
+      "physics": false
+    },
+    "url": "https://www.cricbuzz.com/",
+    "fileLocation": "",
+    "selectChoice": "cricket",
+    "about": "Additional details goes here ...."
+  }
+}
