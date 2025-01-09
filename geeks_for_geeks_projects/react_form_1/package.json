@@ -4,8 +4,8 @@
   "description": "This is a react Project with basic form inputs",
   "scripts": {
     "test": "jest",
-    "start":"parcel userform.html",
-    "build":"parcel build userform.html"
+    "start":"parcel index.html",
+    "build":"parcel build index.html"
   },
   "keywords": [
     "InputForm"

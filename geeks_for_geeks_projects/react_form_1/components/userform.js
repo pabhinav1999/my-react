@@ -1,7 +1,7 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
 import { useState } from "react";
 import { useEffect } from "react";
+import EditResponse from "./editResopnse";
 
 const UserForm = () => {
   const inputObject = {
@@ -22,6 +22,9 @@ const UserForm = () => {
 
   const [formValues, setFormValues] = useState(inputObject);
   const [triggerSubmit, setTriggerSubmit] = useState(false);
+  const [canEdit, setCanEdit] = useState(false)
+
+  const isEmpty = (obj) => Object.keys(obj).length === 0
 
   useEffect(() => {
     if (triggerSubmit) {
@@ -36,11 +39,20 @@ const UserForm = () => {
       body: JSON.stringify(body),
     });
     const jsonResponse = await response.json();
+    if( !isEmpty(jsonResponse)){
+      setCanEdit((value) => !value)
+    }
 
     console.log(jsonResponse, "jsonResponse");
   };
 
+  if( canEdit ) {
+    return ( <EditResponse response= {formValues} />)
+  }
+  else {
+
   return (
+
     <>
       {console.log(triggerSubmit, "triggerSubmit")}
 
@@ -100,7 +112,7 @@ const UserForm = () => {
             onChange={(event) => {
               setFormValues({
                 ...formValues,
-                emailAddress: event.target.value,
+                contact: event.target.value,
               });
             }}
             type="text"
@@ -246,7 +258,7 @@ const UserForm = () => {
       </div>
     </>
   );
+}
 };
 
-const root = ReactDOM.createRoot(document.getElementById("formContainer"));
-root.render(<UserForm />);
+export default UserForm
