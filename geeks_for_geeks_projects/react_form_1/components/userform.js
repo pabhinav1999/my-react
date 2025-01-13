@@ -1,9 +1,8 @@
 import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
-import EditResponse from "./editResopnse";
 
-const UserForm = () => {
+const UserForm = (props) => {
   const inputObject = {
     firstName: "Abhinav Kumar",
     lastName: "Pulijala",
@@ -21,10 +20,7 @@ const UserForm = () => {
   const subjects = ["english", "maths", "physics"];
 
   const [formValues, setFormValues] = useState(inputObject);
-  const [triggerSubmit, setTriggerSubmit] = useState(false);
-  const [canEdit, setCanEdit] = useState(false)
-
-  const isEmpty = (obj) => Object.keys(obj).length === 0
+  let [triggerSubmit, setTriggerSubmit] = useState(false);
 
   useEffect(() => {
     if (triggerSubmit) {
@@ -39,20 +35,10 @@ const UserForm = () => {
       body: JSON.stringify(body),
     });
     const jsonResponse = await response.json();
-    if( !isEmpty(jsonResponse)){
-      setCanEdit((value) => !value)
-    }
-
-    console.log(jsonResponse, "jsonResponse");
+    console.log(jsonResponse);
   };
 
-  if( canEdit ) {
-    return ( <EditResponse response= {formValues} />)
-  }
-  else {
-
   return (
-
     <>
       {console.log(triggerSubmit, "triggerSubmit")}
 
@@ -247,9 +233,7 @@ const UserForm = () => {
           type="submit"
           onClick={(event) => {
             event.preventDefault();
-            setTriggerSubmit((value) => {
-              return !value;
-            });
+            setTriggerSubmit(true);
             console.log("Only called on click of submit");
           }}
         >
@@ -258,7 +242,6 @@ const UserForm = () => {
       </div>
     </>
   );
-}
 };
 
-export default UserForm
+export default UserForm;
