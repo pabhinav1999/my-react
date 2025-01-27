@@ -1,4 +1,5 @@
 import { RES_CDN_URL } from "../utils/constants";
+import { Link } from "react-router-dom"
 
 const imgStyle = {
     height: '100px',
@@ -8,7 +9,9 @@ const imgStyle = {
 
 const RestaurantCard = (props) =>{
     const { restaurant } = props;
+    console.log(restaurant,'restaurant')
     return (
+      <Link key={restaurant.id} to={"restaurant/"+ restaurant.id }>
         <div className="resCard">
             <img style={imgStyle} src={`${RES_CDN_URL}${restaurant.cloudinaryImageId}`} alt="restaurant.png"></img>
             <span> { restaurant.name } </span>
@@ -19,6 +22,7 @@ const RestaurantCard = (props) =>{
             <span> { restaurant.areaName }</span>
             <span> { restaurant.sla.slaString }</span>
         </div>
+      </Link>  
     )
 }
 
