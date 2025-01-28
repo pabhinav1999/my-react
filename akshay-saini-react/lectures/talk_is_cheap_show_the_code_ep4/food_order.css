@@ -121,3 +121,8 @@
    margin: 20px;
    background-color: #f0f0f0;
  }
+
+ .userContainer {
+   padding: 10px;
+   border: 1px solid black;
+ }
